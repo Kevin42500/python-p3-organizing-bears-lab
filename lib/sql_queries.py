@@ -1,18 +1,37 @@
+# Select all female bears and return their names and ages
 select_all_female_bears_return_name_and_age = """
-    Write your SQL query here
+    SELECT
+        name,
+        age
+    FROM bears
+    WHERE sex = 'F';
 """
 
-select_all_bears_names_and_orders_in_alphabetical_order = """
-    Write your SQL query here
+# Select bears that are alive and have a temperament of 'Friendly' or 'Calm'
+select_friendly_or_calm_alive_bears = """
+    SELECT
+        name,
+        temperament
+    FROM bears
+    WHERE alive = 1
+    AND (temperament = 'Friendly' OR temperament = 'Calm');
 """
 
-select_all_bears_names_and_ages_that_are_alive_and_order_youngest_to_oldest = """
-    Write your SQL query here
+# Select the oldest bear
+select_oldest_bear = """
+    SELECT
+        name,
+        MAX(age) AS age
+    FROM bears;
 """
 
-select_oldest_bear_and_returns_name_and_age = """
-    Write your SQL query here
+# Select the count of male bears
+select_count_of_male_bears = """
+    SELECT
+        COUNT(*) AS male_bear_count
+    FROM bears
+    WHERE sex = 'M';
 """
-select_youngest_bear_and_returns_name_and_age = """
-    Write your SQL query here
-"""
+
+sys.path.append('/home/kevin/python-p3-organizing-bears-lab')
+

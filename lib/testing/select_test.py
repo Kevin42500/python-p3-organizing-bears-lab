@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
+from sql_queries import select_all_bears_names_and_orders_in_alphabetical_order
 
 import sqlite3
+import sys
+sys.path.append('/home/kevin/python-p3-organizing-bears-lab')  # Add project directory to Python path
 
+# Import the necessary functions from sql_queries
 from sql_queries import (
     select_all_female_bears_return_name_and_age,
     select_all_bears_names_and_orders_in_alphabetical_order,
@@ -9,6 +13,9 @@ from sql_queries import (
     select_oldest_bear_and_returns_name_and_age,
     select_youngest_bear_and_returns_name_and_age,
 )
+
+# Rest of your test script...
+
 
 connection = sqlite3.connect(":memory:")
 
